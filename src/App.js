@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import ReactDOM from "react-dom";
+import State from "./State";
+import Effect from "./Effect";
+import Context from "./Context";
+import Ref from "./Ref";
+import Reducer from "./Reducer";
+import Memo from "./Memo";
+import Callback from "./Callback";
+import LayoutEffect from "./LayoutEffect";
+import ImperativeHandle from "./ImperativeHandle";
+import DebugValue from "./DebugValue";
+
+import "./styles.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <State />
+      <hr />
+      <Effect />
+      <hr />
+      <Context />
+      <hr />
+      <Ref />
+      <hr />
+      <Reducer />
+      <hr />
+      <Memo />
+      <hr />
+      <Callback />
+      <hr />
+      <LayoutEffect />
+      <hr />
+      <ImperativeHandle />
+      <hr />
+      <DebugValue />
     </div>
   );
 }
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 
 export default App;
